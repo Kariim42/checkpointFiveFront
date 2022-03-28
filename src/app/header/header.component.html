@@ -1,0 +1,18 @@
+<!--NAV-->
+<div class="customNavbar">
+    <div><a routerLink="/"><img src="../assets/Fukomashi.png" alt="" class="logo"></a></div>
+    <!--Desktop Menu-->
+    <div class="menuDesktop">
+        <a routerLink="/posts" class="burgerMenuOpenLink">Posts</a>
+        <a routerLink="/creation" class="burgerMenuOpenLink">Création</a>
+    </div>
+    <!--Mobile Menu burger-->
+    <div (click)="openMenu()" class="burgerMenu" [ngClass]="{burgerMenuContentActive : isActive}">
+        <span class="burgerMenu-content"></span>
+    </div>
+</div>
+<div class="burgerMenuClosed" [ngClass]="{burgerMenuOpen : isActive}">
+    <a routerLink="/posts" class="burgerMenuOpenLink">Posts</a>
+    <a routerLink="/creation" class="burgerMenuOpenLink">Création</a>
+    <div class="burgerMenuOpenWhite"></div>
+</div>

@@ -1,0 +1,29 @@
+span{
+    color: white;
+    margin-left: 1em;
+    font-size: 3em;
+}
+
+.post{
+    width: 70%;
+    height: 25em;
+    background-color: white;
+    margin: 2em 2em 2em 2em;
+    position: relative;
+    border-radius: .5em;
+}
+
+.update{
+    position: absolute;
+    background-color: grey;
+    top: 0;
+    right: 0;
+    border-radius: .5em;
+    width: 3em;
+    height: 2.5em;
+}
+
+.update img{
+    width: 2.5em;
+    height: 2em;
+}

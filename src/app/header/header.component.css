@@ -1,0 +1,129 @@
+/*Navbar */
+
+.customNavbar{
+    background-color:#313131 ;
+    width: 100vw;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 8em;
+}
+
+.logo{
+    width: 8em;
+    cursor: pointer;
+}
+
+.burgerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5em;
+    position: relative;
+}
+
+/*Menu burger animation */
+
+.burgerMenu-content{
+    margin: 4px 4px 4px 4px;
+    width: 2.5em;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.burgerMenu-content::before, .burgerMenu-content::after{
+    content: '';
+    height: 2px;
+    position: absolute;
+    width: 2.5em;
+    background-color: white;
+    transition: transform .8s ease-in-out;
+}
+
+.burgerMenu-content::before{
+    transform: translateY(-10px);
+}
+
+.burgerMenu-content::after{
+    transform: translateY(10px);
+}
+
+.burgerMenuContentActive span{
+    background-color: transparent;
+    transform: rotate(180deg);
+}
+
+.burgerMenuContentActive span::before{
+    transform: translateY(0px);
+    transform: rotateZ(45deg);
+}
+
+.burgerMenuContentActive span::after{
+    transform: translateY(0px);
+    transform: rotateZ(-45deg);
+}
+/*Menu burger open/closed */
+
+.burgerMenuClosed{
+    position: absolute;
+    top: -300%;
+    transition: all 1s ease-in-out;
+    width: 100vw;
+    z-index: 1;
+}
+
+.burgerMenuOpen{
+    height: 20em;
+    background-color: #313131;
+    position: absolute;
+    top: 8em;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+.burgerMenuOpenLink{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin: 30px 5px 5px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.burgerMenuOpenWhite{
+    height: 2px;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+/*Version Desktop*/
+.menuDesktop{
+    display: flex;
+    margin-right: 1em;
+    font-size: 1em;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 769px){
+    .burgerMenu{
+        display: none;
+    }
+    .burgerMenuClosed{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .menuDesktop{
+        display: none;
+    }
+}

@@ -3,7 +3,7 @@
 }
 
 span{
-    color: white;
+    color: black;
     margin-left: 1em;
     font-size: 3em;
 }
@@ -24,12 +24,13 @@ span{
 }
 
 label{
-    color: white;
+    color: black;
 }
 
 .buttonForm{
     display: flex;
     justify-content: center;
+    margin-top: 1em;
 }
 
 .buttonFormContent{

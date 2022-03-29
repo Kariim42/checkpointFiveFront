@@ -3,7 +3,7 @@
 }
 
 span{
-    color: white;
+    color: black;
     margin-left: 1em;
     font-size: 3em;
 }
@@ -17,19 +17,25 @@ span{
 
 .inputForm{
     margin: .5em .5em .5em .5em;
+    border-radius: 3rem;
+    padding: 1em 1em 1em 1em;
 }
 
 .textareaForm{
     margin: .5em .5em .5em .5em;
+    border-radius: 1rem;
+    padding: 2em 2em 2em 2em;
 }
 
 label{
-    color: white;
+    color: black;
 }
 
 .buttonForm{
     display: flex;
     justify-content: center;
+    border-radius: 3rem;
+    margin-top: 1em;
 }
 
 .buttonFormContent{

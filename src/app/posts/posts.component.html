@@ -1,15 +1,15 @@
 <div class="container">
     <span>Posts :</span>
-    <div class="post" *ngFor="let posts of post">
-        <div>
+    <div class="post" *ngFor="let posts of post; let i as index">
+        <div class="postTitle">
             <p>Titre : {{posts.title}}</p>
         </div>
-        <div>message : {{posts.description}} </div>
-        <div class="update" (click)="modifyPost(posts.id)">
-            <img src="../assets/crayon-de-couleur.png" alt="">
+        <div class="params" (click)="params()"><img src="../assets/reglage.png" alt=""></div>
+        <div class="paramètre" *ngIf="openParams">
+            <p (click)="modifyPost(posts.id)">Modifier</p>
+            <p (click)="deleteCategory(posts.id)">Supprimer</p>
         </div>
-        <div class="delete" (click)="deleteCategory(posts.id)">
-            <img src="../assets/icons8-supprimer-24.png" alt="">
+        <div class=" postDescription">- Message : {{posts.description}}
         </div>
     </div>
 </div>

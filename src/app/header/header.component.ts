@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   isActive:boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
   openMenu(){
     this.isActive = !this.isActive;
-    console.log(this.isActive);
   }
+  
 }

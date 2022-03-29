@@ -10,22 +10,28 @@ import { PostService } from 'src/shared/service/post.service';
 })
 export class PostsComponent implements OnInit {
   post : Post[] | undefined;
+  openParams: boolean;
+
 
   constructor(private postService : PostService, private router: Router) {
     this.post = [];
     this.postService.getPost().subscribe((response: Post[]) => {
       this.post = response;
     });
-    console.log(this.post);
+    this.openParams = false;
   }
 
   ngOnInit(): void {
 
   }
+
+  params(){
+    this.openParams = !this.openParams
+  }
+
   deleteCategory(id: number) {
     this.postService.deletePost(id).subscribe(
       (response: any) => {
-        console.log(response);
       },
       (error: any) => {
       }

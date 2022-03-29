@@ -30,7 +30,6 @@ export class ModifyComponent implements OnInit{
       this.postService.getOnePost(params.id).subscribe((response: Post)=>{
         this.post = response;
         this.postId = params.id;  
-        console.log(response);
 
     this.createPostForm = this.fb.group({
       postTitle: [response.title, [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
@@ -47,8 +46,8 @@ export class ModifyComponent implements OnInit{
     
     this.postService.modifyPost(formData, this.postId).subscribe((response : existingPost)=>{
       this.existingPost = response;
-      console.log(response);
     })
+    this.route.navigateByUrl('/posts');
   }
 
 }

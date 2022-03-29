@@ -1,6 +1,42 @@
 .content {
     position: absolute;
-    color: white;
-    top: 50%;
-    right: 50%;
+    color: black;
+    top: 30%;
+    right: 30%;
+    left: 10%;
+}
+
+.contentTitle p{
+    font-size: 200%;
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0em 0px 0px 0em;
+}
+
+.contentTitle h1{
+    font-size: 200%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0em 0px 0px 0em;
+}
+
+.logo{
+    opacity: 50%;
+    position: absolute;
+    top: 40%;
+}
+
+.logoImg{
+    width: 80%;
+}
+
+@media screen and (min-width: 769px){
+    .logo{
+        position: absolute;
+        top: 10%;
+        right: 20%;
+    }
+    .logoImg{
+        width: 120%;
+    }
 }

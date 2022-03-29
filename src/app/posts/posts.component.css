@@ -27,3 +27,18 @@ span{
     width: 2.5em;
     height: 2em;
 }
+
+.delete{
+    position: absolute;
+    background-color: grey;
+    bottom: 0;
+    right: 0;
+    border-radius: .5em;
+    width: 3em;
+    height: 2.5em;
+}
+
+.delete img{
+    width: 2.5em;
+    height: 2em;
+}
